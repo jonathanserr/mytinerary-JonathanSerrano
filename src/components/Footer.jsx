@@ -4,8 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        
-        {/* Sección de contacto */}
+
         <div className="footer-section space-y-2">
           <h3 className="text-xl font-semibold text-blue-400">CONTACT INFORMATION</h3>
           <p>Address  :  221B Baker Street, London, NW1 6XE, United Kingdom</p>
@@ -19,7 +18,6 @@ export default function Footer() {
           
         </div>
 
-        {/* Sección de enlaces Utiles */}
         <div className="footer-section space-y-2">
           <h3 className="text-xl font-semibold text-blue-400">LINKS OF INTEREST</h3>
           <ul className="space-y-1">
@@ -31,7 +29,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Sección de redes sociales y newsletter */}
         <div className="footer-section space-y-4">
           <h3 className="text-xl font-semibold text-blue-400">Follow Us</h3>
           <ul className="flex justify-center md:justify-start space-x-4">
@@ -40,8 +37,7 @@ export default function Footer() {
             <li><NavLink to="#" className="hover:text-blue-400">Facebook</NavLink></li>
           </ul>
 
-          {/* Formulario de suscripción */}
-          <div className="newsletter">
+          <div className="newsletter">  
             <h3 className="text-xl font-semibold text-blue-400">Subscribe to our Newsletter</h3>
             <form action="#" className="flex flex-col sm:flex-row items-center gap-3">
               <input 
@@ -62,7 +58,6 @@ export default function Footer() {
 
       </div>
 
-      {/* Línea separadora y Copyright */}
       <div className="mt-10 border-t border-gray-700 pt-5 text-center text-gray-400 text-sm">
         &copy;  My Tinerary. All rights reserved.
       </div>
