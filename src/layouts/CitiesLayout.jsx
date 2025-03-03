@@ -1,7 +1,15 @@
 import React from 'react'
+import { Outlet } from "react-router-dom";
 
-export default function CitiesLayout() {
-  return (
-    <div>CitiesLayout</div>
-  )
+
+function CitiesLayout() {
+    return (
+        <>
+            <main>
+                <Outlet />
+            </main>
+        </>
+    )
 }
+
+export default CitiesLayout
