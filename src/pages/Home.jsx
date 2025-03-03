@@ -6,7 +6,6 @@ import Carousel from '../components/Carousel';
 const pictures = [
   { title: "BANGKOK", picture: "https://img.freepik.com/free-photo/wat-arun-temple-twilight-bangkok-thailand_335224-772.jpg" },
   { title: "PARIS", picture: "https://media.admagazine.com/photos/6670b5fcf4f373fe3d2039c7/2:3/w_2142,h_3213,c_limit/pexels-magnusflechsenhaar-3361209.jpg" },
-  { title: "LONDON", picture: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSEy4eaPVywfcPEEcIVXsACGD0ykJTDr80laqdcDs9X11Fddora3sr2m2g9ymW7svuOpofoHU5E7ssIPhj-JuUhcnWQGYrm5nfEjAHd1g" },
   { title: "DUBAI", picture: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSnG33SH8er_aD285rdTMj2RQBt9v5o48kGDdMgUnPZnxhEPUiYykuWANV4xNhhuz-JrNvBqN4tNB984aCA21pjNOkypKn5AvqI2bthMg" },
   { title: "SINGAPORE", picture: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTt2XN19sgni8Y38atg-fSw3BJk_R3OiqMj2SobTBLbqfTrApPa9WMPwT1pNsAefOq1gjgqo5FmiJtvEakFCLmJwx41s6o8QNwBigFdpg" },
   { title: "KUALA LUMPUR", picture: "https://lh4.googleusercontent.com/proxy/l6iYRidSyJMbB6AoMF81yaqfGOeZ_FyQu2wPqEHKm5KufEFmtkdCcMRnUro5e0hkJVRqbrVrdE3ufQwWjET3XFFoI-jviI5a9Sx0Ys1T1jsSWFuAAzbVFufJRJiwfxG-DmDgOAkEFRdsMvnb2Lr0FvalPyZhUE4=w810-h468-n-k-no" },
@@ -14,6 +13,7 @@ const pictures = [
   { title: "MADRID", picture: "https://publish-p47754-e237306.adobeaemcloud.com/adobe/dynamicmedia/deliver/dm-aid--1899a1bd-bedb-41fb-8e42-1647a2803ae3/Corazon_de_Madrid.app.webp?preferwebp=true" },
   { title: "TOKYO", picture: "https://viajes.nationalgeographic.com.es/medio/2024/09/03/tokio_133ce43a_1284581217_240903122054_1280x854.jpg" },
   { title: "SYDNEY", picture: "https://ingeoexpert.com/wp-content/uploads/2024/12/Sydneyoperahouse_at_night.webp" },
+  { title: "LONDON", picture: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSEy4eaPVywfcPEEcIVXsACGD0ykJTDr80laqdcDs9X11Fddora3sr2m2g9ymW7svuOpofoHU5E7ssIPhj-JuUhcnWQGYrm5nfEjAHd1g" },
   { title: "BARCELONA", picture: "https://cdn.bueno-bonito-barcelona.com/wp-content/uploads/sites/2/2014/06/playa-barcelona-ok.jpg" },
   { title: "ROME", picture: "https://tourismmedia.italia.it/is/image/mitur/20220127150143-colosseo-roma-lazio-shutterstock-756032350-2?wid=1600&hei=900&fit=constrain,1&fmt=webp" }
 ];
@@ -37,11 +37,8 @@ export default function Home() {
         <div className='h-full flex justify-between'>
           <div className='h-full flex flex-col justify-center items-center my-text text-white'>
             <h2 className='pt-16 text-4xl text-center m-4'>Popular Mytineraries</h2>
-            <div className='flex-col'>
-              <p className='text-2xl text-center p-20 '>Find the perfect path for your next trip ... planning your next trip has never been easier.</p>
-            </div>
-            <div className='m-5'>
-              <Carousel pictures={pictures} intervalo={3500} />
+            <div className='m-2 h-full'>
+              <Carousel pictures={pictures} intervalo={3000} />
             </div>
           </div>
         </div>
