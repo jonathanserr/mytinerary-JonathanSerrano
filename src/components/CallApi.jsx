@@ -1,44 +1,44 @@
-import React, { useEffect, useState } from 'react';
+ import React, { useEffect, useState } from 'react';
+ import CityCard from './CityCard';
+ import { VscSearchStop } from "react-icons/vsc";
  
- function CallApi() {
+ function CallApi({ searchText }) {
      const [cities, setCities] = useState([]);
      const [error, setError] = useState(null);
  
      useEffect(() => {
-         console.log("Fetching cities...");  // Agrega un mensaje para saber que la solicitud comenzó
- 
-         fetch("http://localhost:6060/api/cities/allCities")
-             .then(res => {
+         const fetchCities = async () => {
+             try {
+                 let url = "http://localhost:6060/api/cities/allCities";
+                 
+                 if (searchText) {
+                     url += `?name=${searchText}`;
+                 }
+                 
+                 const res = await fetch(url);
                  if (!res.ok) {
                      throw new Error(`Network response was not ok, status: ${res.status}`);
                  }
-                 return res.json();
-             })
-             .then(data => {
-                 console.log("Data received:", data);  // Agrega un mensaje para saber si los datos llegaron
-                 setCities(data.response || []);  // Maneja la respuesta si está vacía o undefined
-             })
-             .catch(error => {
-                 console.error("Failed to fetch cities:", error);  // Muestra el error en la consola
-                 setError(error.message);  // Guarda el mensaje de error en el estado
-             });
-     }, []);
+                 const data = await res.json();
+                 setCities(data.response || []);
+             } catch (error) {
+                 setError(error.message);
+             }
+         };
+ 
+         fetchCities();
+     }, [searchText]);  
  
      if (error) {
-         return <p>Error: {error}</p>;  // Muestra el error en la UI si ocurre
+         return <p>Error: {error}</p>;
      }
  
      return (
-         <div>
-             <h2>City List</h2>
+         <div className=" flex flex-wrap justify-center gap-12 p-6">
              {cities.length > 0 ? (
-                 <ul>
-                     {cities.map((city) => (
-                         <li key={city.id}>{city.name}</li>  // Asegúrate de que los campos coincidan con la estructura de tu API
-                     ))}
-                 </ul>
+                 cities.map((city) => <CityCard key={city.id} city={city} />)
              ) : (
-                 <p>Loading cities...</p>
+                 <p className='text-7xl ms-10 my-24 flex gap-6 text-center text-white'>Sorry. There are no results for your search.<VscSearchStop /></p>
              )}
          </div>
      );

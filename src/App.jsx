@@ -10,6 +10,7 @@ import FirstLayout from './layouts/FirstLayout';
 import CitiesLayout from './layouts/CitiesLayout';
 import User from './pages/User';
 
+
 // se crean rutas y se le asigna un layout a cada una
 const router = createBrowserRouter([ 
   {

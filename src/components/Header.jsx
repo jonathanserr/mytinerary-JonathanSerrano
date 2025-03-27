@@ -31,7 +31,7 @@ function Header() {
 
             {/* Título con efecto de desaparición */}
             <h1
-                className={`text-center pe-10 mx-auto cursor-pointer text-3xl font-bold tracking-wide transition-all duration-500
+                className={`text-center pe-10 mx-auto cursor-pointer text-5xl font-bold tracking-wide transition-all duration-500
                     font-poppins text-white drop-shadow-md hover:text-black hover:drop-shadow-xl 
                     ${isScrolled ? 'opacity-0 translate-y-[-10px] pointer-events-none' : 'opacity-100 translate-y-0'}`}
                 onClick={handleLogoClick}
