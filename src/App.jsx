@@ -1,11 +1,12 @@
 
 import './App.css'
-
+import React from 'react'
 // importo rutas y layouts
 import { RouterProvider, createBrowserRouter, Navigate } from "react-router-dom";
-import NotFound from './layouts/NotFound';
+
 import Home from './pages/Home';
 import Cities from './pages/Cities';
+import CityDetails from './pages/CityDetails';
 import FirstLayout from './layouts/FirstLayout';
 import CitiesLayout from './layouts/CitiesLayout';
 import User from './pages/User';
@@ -28,16 +29,17 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/*", 
-    element: <NotFound />,
+    path: "/CityDetails", 
+    element: <CityDetails />,
   },
+
 ]);
 function App() {
 
 
   return (
     <>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}/>
     </>
     // aca se renderiza el router
   )
