@@ -1,20 +1,16 @@
-import React from 'react';
- import { FaSearchLocation } from "react-icons/fa";
-
-function SearchBar({ searchText, handleChangeText }) {
+function SearchBar({search, searchChange}) {
+    
     return (
-        <div className="flex gap-1 mt-20 justify-center my-6">
-            <input
-                className="border-2 min-w-80 border-red-800 rounded-lg ps-2 sm:h-9"
-                type="search"
-                placeholder="Search by city..."
-                value={searchText}
-                onChange={(e) => handleChangeText(e.target.value)}
-                required=""
-            />
-            <FaSearchLocation className="text-3xl text-cian-800" />
-        </div>
+      <div className="flex justify-center h-10 w-full">
+        <input
+          className="w-sm h-15 border border-white-500 px-4 py-2 bg-blue-600/30 placeholder:text-white text-center text-xl rounded-2xl mt-10 hover:scale-105"
+          type="text"
+          placeholder="Which city do you want to visit?"
+          value={search}
+          onChange={searchChange}
+        />
+      </div>
     );
-};
+  }
 
-export default SearchBar;
+  export default SearchBar;

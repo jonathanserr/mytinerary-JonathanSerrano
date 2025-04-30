@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
 
-export default function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white py-10 px-6 md:px-12">
+
+function Footer() {  
+    return(
+        <footer className="bg-gray-900 text-white py-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 
         <div className="footer-section space-y-2">
@@ -62,5 +63,7 @@ export default function Footer() {
         &copy;  My Tinerary. All rights reserved.
       </div>
     </footer>
-  );
+    )
 }
+
+export default Footer
