@@ -48,7 +48,7 @@ function Itineraries({ itineraries }) {
                             <div className=" w-full h-50 text-center flex justify-around rounded-b-xl p-5 italic bg-gray-900/40">
                                 <div className="text-white">
                                     <img className="h-20 w-20 rounded-xl"
-                                        src={itinerary.itineraryPhoto} alt={itinerary.nameUser} />
+                                        src={itinerary.userPhoto} alt={itinerary.nameUser} />
                                     <p className="w-20 pt-5">
                                         Created By: {itinerary.nameUser}</p>
                                 </div>
