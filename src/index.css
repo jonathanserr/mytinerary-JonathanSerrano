@@ -1,13 +1,2 @@
 @import "tailwindcss";
 
-@keyframes bgMove {
-    0% { background-position: center; }
-    25% { background-position: top left; }
-    50% { background-position: top right; }
-    75% { background-position: bottom right; }
-    100% { background-position: center; }
-}
-
-.animate-bg-move {
-    animation: bgMove 30s infinite ease-in-out;
-}
